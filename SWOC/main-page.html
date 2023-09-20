@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOC Analysis</title>
+    <link rel="stylesheet" href="swoc_app.py">
+    <link rel="stylesheet" href="views.py">
+    <link rel="stylesheet" href="forms.py">
+    <link rel="stylesheet" href="urls.py">
+    <link rel="stylesheet" href="manage.py">
+    <form action="process_form.php" method="post" id="comment-form">
+        <!-- Your form fields here -->
+    </form>
+    
+    <style>
+        /* Reset some default styles for consistency */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set a background image and styles for the entire page */
+        body {
+            background-image: url('Radhe-Krishna(Radhe Radhe).jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            color: #fff;
+            padding: 20px;
+        }
+            @keyframes moveWord {
+                0% {
+                    transform: translateX(0); /* Start position */
+                }
+                100% {
+                    transform: translateX(100%); /* End position (adjust as needed) */
+                }
+            }
+    
+            /* Apply the animation to the text */
+            .{
+                animation: moveWord 5s linear infinite; /* Adjust duration as needed */
+            }
+        
+
+        /* Style the main content container */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Use a semi-transparent background color for readability */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the SWOC acronym section */
+        .SWOC {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* Style the parts section */
+        .parts {
+            margin-top: 20px;
+        }
+
+        /* Style the ordered list */
+        .parts ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+
+        /* Style the buttons */
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .button button:hover {
+            background-color: #555;
+        }
+
+        /* Style the comment form */
+        #comment-form {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Style the navigation menu */
+        .mySWOC {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .mySWOC ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mySWOC ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .mySWOC ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to SWOC</h1>
+    </header>
+    <div class="main-container">
+        <div class="SWOC">
+            <h2>What is SWOC?</h2>
+        </div>
+        <div class="definition">
+            <p><b>"SWOC"</b> is an acronym that stands for <b><i>Strengths, Weaknesses, Opportunities,  Challenges</i></b>. It is often used as a framework for conducting a strategic analysis or assessment, particularly in the context of business planning, project management, or personal development.</p>
+        </div>
+        <div class="parts">
+            <ol>
+                <li><b>S</b>trengths:
+                    <p>These are the internal, positive attributes and characteristics that an individual, organization, or project possesses. Strengths can include resources, capabilities, skills, or any other factors that provide an advantage.</p>
+                </li>
+                <li><b>W</b>eaknesses:
+                    <p>Weaknesses represent the internal, negative aspects or limitations of an individual, organization, or project. These are factors that hinder or pose challenges to achieving goals or objectives.</p>
+                </li>
+                <li><b>O</b>pportunities:
+                    <p>Opportunities are external factors or circumstances that can be leveraged to benefit an individual, organization, or project. Identifying opportunities is crucial for growth and success.</p>
+                </li>
+                <li><b>C</b>hallenges:
+                    <p>Challenges, also known as threats, are external factors or obstacles that may hinder progress or pose risks to an individual, organization, or project. Understanding challenges helps in mitigating risks and planning for contingencies.</p>
+                </li>
+            </ol>
+            <p><b>SWOC</b> analysis is often used as part of strategic planning processes to assess the current situation, set goals, and develop strategies to achieve those goals. By identifying and understanding strengths, weaknesses, opportunities, and challenges, individuals and organizations can make informed decisions and take actions to maximize their chances of success.</p>
+            <p>It's worth noting that <b>SWOC</b> is very similar to the <b>SWOT</b> analysis, with the only difference being that <b>S</b>WOT stands for <b>Strengths, Weaknesses, Opportunities, and Threats</b>, where <b>"threats"</b> are synonymous with <b>"challenges"</b> in <b>SWOC</b>.</p>
+        </div>
+        <nav class="mySWOC">
+            <ul>
+                <li><a href="Strength.html">My Strengths</a></li>
+                <li><a href="Weakness.html">My Weaknesses</a></li>
+                <li><a href="Opportunities.html">My Opportunities</a></li>
+                <li><a href="Challenges.html">My Challenges</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="button">
+            <a href="login.html"><button>Login</button></a>
+            <p>or</p>
+            <a href="sign up.html"><button>Sign up</button></a>
+        </div>
+        <section id="comment-form">
+            <h2>Add a Comment</h2>
+            <form>
+                <div class="form-group">
+                    <label for="author">Name:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const commentForm = document.getElementById('add-comment-form');
+            const commentsList = document.getElementById('comments-list');
+
+            commentForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Get input values
+                const authorInput = document.getElementById('author');
+                const commentInput = document.getElementById('comment');
+                const author = authorInput.value;
+                const comment = commentInput.value;
+
+                // Create a new comment element
+                const newComment = document.createElement('li');
+                newComment.innerHTML = `<strong>${author}:</strong> ${comment}`;
+
+                // Append the new comment to the comments list
+                commentsList.appendChild(newComment);
+
+                // Clear the form inputs
+                authorInput.value = '';
+                commentInput.value = '';
+            });
+        });
+    </script>
+</body>
+</html>
